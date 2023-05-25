@@ -1,0 +1,66 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="weather_app_boxgrid.css" />
+    <title>Weatherapp</title>
+  </head>
+  <body>
+    <div class="container">
+      <form id="search-city">
+        <input
+          class="searchbar"
+          type="search"
+          input="type"
+          autofocus="on"
+          autocomplete="off"
+          placeholder="Type a city..."
+          id="choose-city"
+        />
+        <button class="searchbutton">search</button>
+      </form>
+
+      <h2 id="date">Weather</h2>
+      <br />
+      <h5 id="city">City</h5>
+      <br />
+      <h1 id="temperature">18</h1>
+      <br />
+      <div class="weekdays">
+        <div class="days">
+          <p>Mon</p>
+          <a>&#x1F311;</a>
+          <p>17</p>
+        </div>
+        <div class="days">
+          <p>MON</p>
+          <a>&#x1F311;</a>
+          <p>17</p>
+        </div>
+        <div class="days">
+          <p>TUE</p>
+          <a>&#x2600;</a>
+          <p>22</p>
+        </div>
+        <div class="days">
+          <p>WED</p>
+          <a>&#x26C5;</a>
+          <p>19</p>
+        </div>
+        <div class="days">
+          <p>THU</p>
+          <a>&#x1F326;</a>
+          <p>15</p>
+        </div>
+        <div class="days">
+          <p>FRI</p>
+          <a>&#x2600;</a>
+          <p>17</p>
+        </div>
+      </div>
+    </div>
+    <script src="weather_app.js"></script>
+  </body>
+</html>

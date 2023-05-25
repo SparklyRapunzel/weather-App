@@ -1,0 +1,64 @@
+.container {
+  width: 47%;
+  display: block;
+  margin: 0 auto;
+
+  margin-top: 5rem;
+  padding-top: 1rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  text-align: center;
+  border: 2px solid lightgray;
+  border-radius: 0.5em;
+}
+
+.searchbar {
+  width: 40%;
+  display: block;
+  margin: 0 auto;
+}
+
+.searchbutton {
+  width: 15%;
+  background-color: lightskyblue;
+  border: lightskyblue;
+  border-radius: 0.3em;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 13px;
+}
+
+.searchbutton:hover {
+  background-color: grey;
+}
+
+h2 {
+  text-align: center;
+  padding: 50px;
+}
+
+h5 {
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+.weekdays {
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.days {
+  width: 20%;
+  border: 2px solid grey;
+  border-radius: 0.5rem;
+  color: grey;
+  margin: 0 auto;
+  padding: 0;
+}
