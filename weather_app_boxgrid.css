@@ -65,3 +65,10 @@ h1 {
   margin: 0 auto;
   padding: 0;
 }
+
+li {
+  list-style: none;
+  display: block;
+  text-align: left;
+  color: grey;
+}
