@@ -60,6 +60,10 @@ li {
   text-align: left;
   color: grey;
 }
+
+ul {
+  margin: 0 auto;
+}
 .weekdays {
   max-width: 15%;
   padding: 0;
