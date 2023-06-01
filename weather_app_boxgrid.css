@@ -67,6 +67,7 @@ li {
 }
 
 .days {
+  text-align: center;
   width: 100%;
   border: 2px solid grey;
   border-radius: 0.5rem;
