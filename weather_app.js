@@ -1,5 +1,7 @@
 function displayWeatherCondition(response) {
   descriptionElement.innerHTML = response.data.weather[0].description;
+  humidityElement.innerHTML = response.data.main.humidity;
+  windElement.innerHTML = Math.round(response.data.wind.speed);
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
@@ -14,6 +16,8 @@ function search(event) {
   axios.get(apiUrl).then(displayWeatherCondition);
 }
 
+let windElement = document.querySelector("#wind");
+let humidityElement = document.querySelector("#humidity");
 let descriptionElement = document.querySelector("#description");
 let dateElement = document.querySelector("#date");
 let currentTime = new Date();
