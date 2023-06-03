@@ -6,27 +6,31 @@
   padding-top: 1rem;
   padding-right: 1rem;
   padding-left: 1rem;
-  text-align: center;
-  border: 2px solid lightgray;
+  border: 2px solid purple;
   border-radius: 0.5em;
 }
 
 .searchbar {
-  width: 40%;
+  width: 30%;
   display: block;
-  margin: 0 auto;
+  float: left;
+  margin-right: 2%;
+  border: 2px solid purple;
+  border-radius: 0.5em;
+  padding: 1%;
 }
 
 .searchbutton {
-  width: 15%;
-  background-color: lightskyblue;
-  border: lightskyblue;
+  width: 20%;
+  height: 6%;
+  display: block;
+  background-color: purple;
+  border: purple;
   border-radius: 0.3em;
   color: white;
   padding: 5px 10px;
   text-align: center;
   text-decoration: none;
-  display: block;
   font-size: 13px;
 }
 
@@ -64,18 +68,22 @@ li {
 ul {
   margin: 0 auto;
 }
+
+p {
+  margin: 0 auto;
+}
 .weekdays {
-  max-width: 15%;
+  max-width: 12%;
   padding: 0;
   margin: 0 auto;
 }
 
 .days {
   text-align: center;
-  width: 100%;
+  width: 80%;
   border: 2px solid grey;
   border-radius: 0.5rem;
-  color: grey;
+  color: purple;
   margin: 0 auto;
-  padding: 0;
+  padding: 3%;
 }

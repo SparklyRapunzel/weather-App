@@ -1,4 +1,5 @@
 function displayWeatherCondition(response) {
+  descriptionElement.innerHTML = response.data.weather[0].description;
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
@@ -9,10 +10,11 @@ function search(event) {
   event.preventDefault();
   let apiKey = "46ac7c730ce56529889bec2d81ce7245";
   let city = document.querySelector("#choose-city").value;
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeatherCondition);
 }
 
+let descriptionElement = document.querySelector("#description");
 let dateElement = document.querySelector("#date");
 let currentTime = new Date();
 let hours = currentTime.getHours();
