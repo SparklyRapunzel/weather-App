@@ -2,6 +2,10 @@ function displayWeatherCondition(response) {
   descriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
@@ -16,6 +20,7 @@ function search(event) {
   axios.get(apiUrl).then(displayWeatherCondition);
 }
 
+let iconElement = document.querySelector("#icon");
 let windElement = document.querySelector("#wind");
 let humidityElement = document.querySelector("#humidity");
 let descriptionElement = document.querySelector("#description");
