@@ -1,4 +1,10 @@
+body {
+  background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+}
+
 .container {
+  background-color: white;
+  color: lightblue;
   max-width: 600px;
   display: block;
   margin: 0 auto;
@@ -6,26 +12,27 @@
   padding-top: 1rem;
   padding-right: 1rem;
   padding-left: 1rem;
-  border: 2px solid purple;
+  border: 2px solid lightblue;
   border-radius: 0.5em;
 }
 
 .searchbar {
-  width: 30%;
+  width: 25%;
   display: block;
   float: left;
+  font-style: lightblue;
   margin-right: 2%;
-  border: 2px solid purple;
-  border-radius: 0.5em;
+  border: 2px solid lightblue;
+  color: grey;
+  border-radius: 0.3em;
   padding: 1%;
 }
 
 .searchbutton {
-  width: 20%;
-  height: 6%;
+  width: 10%;
   display: block;
-  background-color: purple;
-  border: purple;
+  background-color: lightblue;
+  border: lightblue;
   border-radius: 0.3em;
   color: white;
   padding: 5px 10px;
@@ -35,25 +42,37 @@
 }
 
 .searchbutton:hover {
-  background-color: grey;
+  background-color: white;
+  color: lightblue;
+  border-color: grey;
 }
 
 h2 {
   text-align: center;
-  padding: 50px;
+  padding-bottom: 7%;
+  font-size: 20px;
+  color: lightblue;
+  display: block;
+  margin: 0 auto;
+  line-height: 28px;
 }
 
 h5 {
   text-align: left;
-  color: #878787;
+  color: lightblue;
   font-size: 24px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 28px;
   display: block;
+  padding-top: 5%;
 }
 
 h1 {
   text-align: center;
+  color: lightblue;
+  font-size: 50px;
+  line-height: 28px;
+  padding-top: 3%;
 }
 
 li {
@@ -62,29 +81,32 @@ li {
   margin: 0 auto;
   padding: 0;
   text-align: left;
-  color: grey;
+  color: lightblue;
   text-transform: capitalize;
 }
 
 ul {
   margin: 0 auto;
+  padding: 0;
 }
 
 p {
   margin: 0 auto;
 }
-.weekdays {
-  max-width: 12%;
-  padding: 0;
+
+img {
+  width: 25%;
+  display: block;
   margin: 0 auto;
+  padding-bottom: 3%;
 }
 
-.days {
+.code {
   text-align: center;
-  width: 80%;
-  border: 2px solid grey;
-  border-radius: 0.5rem;
-  color: purple;
+  display: block;
   margin: 0 auto;
-  padding: 3%;
+  padding-top: 1%;
+  font-size: 10px;
+  text-decoration: none;
+  color: grey;
 }
