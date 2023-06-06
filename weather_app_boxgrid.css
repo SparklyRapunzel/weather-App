@@ -101,6 +101,30 @@ img {
   padding-bottom: 3%;
 }
 
+.col-1 {
+  width: 20%;
+  padding: 0;
+}
+
+.forecast {
+  text-align: center;
+  font-size: 15;
+  display: block;
+  margin: 0 auto;
+  padding-top: 3em;
+}
+
+.forecast-temp-max {
+  display: block;
+  margin: 0 auto;
+  font-weight: 500;
+}
+
+.forecast-temp-min {
+  display: block;
+  margin: 0 auto;
+}
+
 .code {
   text-align: center;
   display: block;
