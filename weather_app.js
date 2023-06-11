@@ -12,34 +12,59 @@ function displayWeatherCondition(response) {
   );
 }
 
-function displayForecast() {
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+
+  return days[day];
+}
+
+function displayForecast(response) {
+  let forecast = response.data.daily;
+
   let forecastElement = document.querySelector("#forecast");
 
-  let forecastHTML = "`<div class=row>`";
-  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `
+  let forecastHTML = `<div class="row">`;
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
+        `
   <div class="forecast" id="forecast">
     <div class="row">
       <div class="col-1">
-        ${day}</div>
+        ${formatDay(forecastDay.dt)}</div>
         <img
-          src="http://openweathermap.org/img/wn/04d@2x.png"
+          src="http://openweathermap.org/img/wn/${
+            forecastDay.weather[0].icon
+          }04d@2x.png"
           width="42"
-          alt="weather icon"
+          alt=""
         />
-        <span class="forecast-temp-max">18°</span>
-        <span class="forecast-temp-min">10°</span>
+        <span class="forecast-temp-max">${Math.round(
+          forecastDay.temp.max
+        )}°</span>
+        <span class="forecast-temp-min">${Math.round(
+          forecastDay.temp.min
+        )}°</span>
       </div>
     </div>
   </div>
   `;
+    }
   });
 
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
+}
+
+function getForecast(coordinates) {
+  let apiKey = "c8735bb7e8e2f8d8a38c7501f3cd47d3";
+  let apiUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+
+  axios.get(apiUrl).then(displayForecast);
+  getForecast(response.data.coord);
 }
 
 function search(event) {
@@ -78,7 +103,5 @@ let days = [
 ];
 
 searchCity.addEventListener("submit", search);
-
-displayForecast();
 
 dateElement.innerHTML = `${days[dayIndex]} ${hours}:${minutes}`;
