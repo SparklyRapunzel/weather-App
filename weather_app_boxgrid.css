@@ -102,16 +102,20 @@ img {
 }
 
 .col-1 {
-  width: 20%;
   padding: 0;
 }
 
-.forecast {
+#forecast.forecast {
+  width: 20%;
   text-align: center;
   font-size: 15;
-  display: block;
   margin: 0 auto;
   padding-top: 3em;
+}
+
+.row {
+  display: block;
+  margin: 0 auto;
 }
 
 .forecast-temp-max {

@@ -12,6 +12,36 @@ function displayWeatherCondition(response) {
   );
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = "`<div class=row>`";
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+  <div class="forecast" id="forecast">
+    <div class="row">
+      <div class="col-1">
+        ${day}</div>
+        <img
+          src="http://openweathermap.org/img/wn/04d@2x.png"
+          width="42"
+          alt="weather icon"
+        />
+        <span class="forecast-temp-max">18°</span>
+        <span class="forecast-temp-min">10°</span>
+      </div>
+    </div>
+  </div>
+  `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function search(event) {
   event.preventDefault();
   let apiKey = "46ac7c730ce56529889bec2d81ce7245";
@@ -48,5 +78,7 @@ let days = [
 ];
 
 searchCity.addEventListener("submit", search);
+
+displayForecast();
 
 dateElement.innerHTML = `${days[dayIndex]} ${hours}:${minutes}`;
